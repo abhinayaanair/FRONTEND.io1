@@ -1,103 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile-first solution using CSS Grid and Flexbox</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@800&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@800&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family:figtree; background-color: hsl(47, 88%, 63%);
+            font-family: figtree;
+            background-color: hsl(47, 88%, 63%);
+            margin: 0; /* Remove default margin */
         }
 
         .main-div {
-            height: 480px;
-            width: 350px;
-            display: flex;
-            flex-direction: column;
+            max-width: 350px; /* Adjust to your desired maximum width */
             margin: auto;
             margin-top: 90px;
             border: solid;
-            border-radius:20px;
+            border-radius: 20px;
             background-color: white;
-            row-gap: 40px;
             box-shadow: 10px 8px;
-        
+            padding: 20px; /* Add padding for better spacing */
         }
-        .div-1{
-            height:140px;
-            margin-top:15px;
-            display:flex;
-            justify-content: center;;
-        }
-        .div-2{
-            margin-top:25px;
-            margin-left:18px;
-            
-           
-        }
-        .image{
-           width:90%;
-           display:inline;
-           margin:auto;
-           border-radius:10px;
-        
-        }
-        .learning-text{
-            
-            display:inline;
-            font-size:14px;
-            font-weight:bold;
-            border:none;
-            border-radius:5px;
-            padding: 4px 8px 4px 8px;
-            background-color:hsl(47, 88%, 63%);
-            cursor:pointer;
-            
-           
-        }
-        .published-date{
-            margin-top:-2px;
-            font-size:14px;
-            font-weight:600;
-           
-        }
-        .file-name{
-            margin-top:-8px;
-            font-weight:800;
-            font-size:20px;
-            margin-bottom:10px;
 
+        .div-1 {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px; /* Add margin for better spacing */
         }
-        .description{
-            color:gray;
-            font-weight:500;
 
+        .image {
+            max-width: 100%;
+            height: auto; /* Make the image responsive */
+            border-radius: 10px;
         }
-        .author{
-            display:flex;
-          flex:50px 1;
-            
+
+        .div-2 {
+            margin-left: 18px;
         }
-        .author-img{
-            margin-top:25px;
-        height:35px;
-       
+
+        .learning-text {
+            font-size: 14px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            padding: 4px 8px;
+            background-color: hsl(47, 88%, 63%);
+            cursor: pointer;
+            margin-bottom: 10px; /* Add margin for better spacing */
         }
-        .name-greg{
-            font-weight:bold;
-            font-size:16px;
-            display:inline;
-            margin-left:10px;
-            margin-top:15px;
-            line-height:20px;
-            padding-top:-10px;
-           
-          
+
+        .published-date,
+        .file-name,
+        .description {
+            font-size: 14px;
+        }
+
+        .file-name {
+            font-weight: 800;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .author {
+            display: flex;
+            align-items: center; /* Center items vertically */
+        }
+
+        .author-img {
+            height: 35px;
+            margin-right: 10px; /* Add margin for better spacing */
+        }
+
+        .name-greg {
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 20px;
+            margin-top: 15px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .main-div {
+                margin-top: 40px; /* Adjust margin for smaller screens */
+            }
         }
     </style>
 </head>
@@ -105,17 +96,18 @@
 <body>
     <div class="main-div">
         <div class="div-1">
-            <img class="image" src="blogpreview resources/illustration-article.svg">
+            <img class="image" src="blogpreview resources/illustration-article.svg" alt="Article Illustration">
         </div>
         <div class="div-2">
-           <div class="learning-text">Learning</div>
-           <div class="published-date"><p>Published 21 Dec 2023</p></div>
-           <div class="file-name">HTML & CSS foundation</div>
-           <div class="description">These languages are the backbone of every website,defining structure,content,and presentation.</div>
-           <div class="author">
-            <div ><img class="author-img" src="blogpreview resources/image-avatar.webp"></div>
-            <div class="name-greg"><p>Greg Hooper</p></div>
-           </div>
+            <div class="learning-text">Learning</div>
+            <div class="published-date"><p>Published 21 Dec 2023</p></div>
+            <div class="file-name">HTML & CSS foundation</div>
+            <div class="description">These languages are the backbone of every website, defining structure,
+                content, and presentation.</div>
+            <div class="author">
+                <div><img class="author-img" src="blogpreview resources/image-avatar.webp" alt="Author Avatar"></div>
+                <div class="name-greg"><p>Greg Hooper</p></div>
+            </div>
         </div>
     </div>
 </body>
