@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@800&display=swap" rel="stylesheet">
+</head>
+    <style>
+        body {
+            font-family:figtree; background-color: hsl(47, 88%, 63%);
+        }
+
+        .main-div {
+            height: 480px;
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            margin-top: 90px;
+            border: solid;
+            border-radius:20px;
+            background-color: white;
+            row-gap: 40px;
+            box-shadow: 10px 8px;
+        
+        }
+        .div-1{
+            height:140px;
+            margin-top:15px;
+            display:flex;
+            justify-content: center;;
+        }
+        .div-2{
+            margin-top:25px;
+            margin-left:18px;
+            
+           
+        }
+        .image{
+           width:90%;
+           display:inline;
+           margin:auto;
+           border-radius:10px;
+        
+        }
+        .learning-text{
+            
+            display:inline;
+            font-size:14px;
+            font-weight:bold;
+            border:none;
+            border-radius:5px;
+            padding: 4px 8px 4px 8px;
+            background-color:hsl(47, 88%, 63%);
+            cursor:pointer;
+            
+           
+        }
+        .published-date{
+            margin-top:-2px;
+            font-size:14px;
+            font-weight:600;
+           
+        }
+        .file-name{
+            margin-top:-8px;
+            font-weight:800;
+            font-size:20px;
+            margin-bottom:10px;
+
+        }
+        .description{
+            color:gray;
+            font-weight:500;
+
+        }
+        .author{
+            display:flex;
+          flex:50px 1;
+            
+        }
+        .author-img{
+            margin-top:25px;
+        height:35px;
+       
+        }
+        .name-greg{
+            font-weight:bold;
+            font-size:16px;
+            display:inline;
+            margin-left:10px;
+            margin-top:15px;
+            line-height:20px;
+            padding-top:-10px;
+           
+          
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-div">
+        <div class="div-1">
+            <img class="image" src="blogpreview resources/illustration-article.svg">
+        </div>
+        <div class="div-2">
+           <div class="learning-text">Learning</div>
+           <div class="published-date"><p>Published 21 Dec 2023</p></div>
+           <div class="file-name">HTML & CSS foundation</div>
+           <div class="description">These languages are the backbone of every website,defining structure,content,and presentation.</div>
+           <div class="author">
+            <div ><img class="author-img" src="blogpreview resources/image-avatar.webp"></div>
+            <div class="name-greg"><p>Greg Hooper</p></div>
+           </div>
+        </div>
+    </div>
+</body>
+
+</html>
